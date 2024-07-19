@@ -1,0 +1,29 @@
+<!-- base.html -->
+<head>
+    <title>{% block title %}Obituary Platform{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Obituary management platform{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}obituary, death, funeral{% endblock %}">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="{% block og_title %}Obituary Platform{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Obituary management platform{% endblock %}">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:type" content="website">
+
+    <!-- Canonical tag -->
+    <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "{% block schema_name %}Obituary Platform{% endblock %}",
+        "description": "{% block schema_description %}Obituary management platform{% endblock %}"
+    }
+    </script>
+
+    <!-- Social media sharing buttons -->
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0"></script>
+</head>
